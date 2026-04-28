@@ -7,7 +7,10 @@ app = FastAPI(title="Sukoon - Mental Wellness Chatbot Backend")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # explicit origin, not wildcard
+    allow_origins=[
+        "http://localhost:5173",
+        "https://sukoon-sable.vercel.app",  # your Vercel URL
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
